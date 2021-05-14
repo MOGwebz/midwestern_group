@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="sh_rr_external_layout_standard" inherit_id="web.external_layout_standard">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="replace">
+            <div t-attf-class="header o_company_#{company.id}_layout" t-att-style="report_header_style">
+                <!-- <div class="o_boxed_header">
+                    <style>
+                        p, span, div {
+                            font-weight: 400;
+                            color: #000000;
+                        }
+                    </style>
+                    <div class=" mb8">
+                        <div class="">
+                            <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" alt="Logo" style="display: block; margin-left: auto; margin-right: auto;"/>
+                        </div>
+                    </div>
+                    <div class="text-center row mb8">
+                        <div class=" mb4">
+                            <h4 class="mt0" t-field="company.report_header"/>
+                            <div name="company_address" class=" mb4">
+                                <span class="company_address" t-field="company.partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: true}"/>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="replace">
+            <div t-attf-class="footer o_boxed_footer o_company_#{company.id}_layout">
+                <div class="text-center">
+                    <style>
+                        p, span, div, li {
+                            font-weight: 400;
+                            color: #000000;
+                        }
+                    </style>
+                    <div>
+                        <p style="text-align: justify;">
+                            <strong>Note to our clients:</strong> : Payments can be made in cash, where upon a receipt shall be duly issued, or by bank transfer or any form of
+                            EFT to our account, Account Name: MIDWESTERN GROUP LTD – PRINTING; Account Number: 3100021465; Bank: CENTENARY BANK
+                            MAIN BRANCH (MAPEERA HOUSE). This account is registered to receive EFT payments from Government through the Integrated
+                            Financial Management System (IFMS). <br/>
+                            <strong style="font-style: italic;">50% Commencement fee</strong>
+                        </p>
+                        <br/>
+                        <p><strong>We thank you for your business and assure you of our commitment to provide the best quality services.</strong></p>
+
+                    </div>
+                    <!-- <ul class="list-inline">
+                        <li t-if="company.phone" class="list-inline-item"><span class="o_force_ltr" t-field="company.phone"/></li>
+                        <li t-if="company.email" class="list-inline-item"><span t-field="company.email"/></li>
+                        <li t-if="company.website" class="list-inline-item"><span t-field="company.website"/></li><br/>
+                        <li t-if="company.vat" class="list-inline-item"><t t-esc="company.country_id.vat_label or 'Tax ID'"/>: <span t-field="company.vat"/></li>
+                    </ul> -->
+                    <div t-field="company.report_footer"/>
+                    <div t-if="report_type == 'pdf'">
+                        Page: <span class="page"/> / <span class="topage"/>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Assets for reports -->
+    <template id="sh_rr_external_layout">
+        <t t-if="not o and doc">
+            <t t-set="o" t-value="doc" />
+        </t>
+        <t t-if="o and 'company_id' in o">
+            <t t-set="company" t-value="o.company_id.sudo()" />
+        </t>
+        <t t-if="not o or not 'company_id' in o">
+            <t t-set="company" t-value="res_company" />
+        </t>
+        <t t-call="midwestern_group.sh_rr_external_layout_standard"><t t-raw="0" /></t>
+    </template>
+</odoo>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Invoices without Payment Receipt -->
+
+    <record id="action_sh_rr_invoice_report" model="ir.actions.report">
+        <field name="name">Midwestern Invoice without Payment</field>
+        <field name="model">account.move</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">midwestern_group.sh_rr_invoice_receipt</field>
+        <field name="report_file">midwestern_group.sh_rr_invoice_receipt</field>
+        <field name="binding_model_id" ref="account.model_account_move" />
+        <field name="print_report_name">(object.name)</field>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- Invoices Receipt -->
+
+    <record id="action_sh_rr_invoice_without_payment_report" model="ir.actions.report">
+        <field name="name">Midwestern Invoice</field>
+        <field name="model">account.move</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">midwestern_group.sh_rr_invoice_with_payment_receipt</field>
+        <field name="report_file">midwestern_group.sh_rr_invoice_with_payment_receipt</field>
+        <field name="binding_model_id" ref="account.model_account_move" />
+        <field name="print_report_name">(object.name)</field>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>
