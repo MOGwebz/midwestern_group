@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
+<!-- add css / js -->
+<template id="assets_backend" name="js assets" inherit_id="web.assets_backend">
+    <xpath expr="." position="inside">
+        <script 
+            type="text/javascript" 
+            src="midwestern_group/static/src/js/subst.js">
+         </script>
+    </xpath>
+</template>
+
 <template id="sh_report_saleorder_document">
     <!--<t t-call="web.external_layout">-->
         <t t-set="doc" t-value="doc.with_context(lang=lang)"/>
@@ -140,7 +151,7 @@
                 </style>
 
 
-            <!-- <h2 class="mt16">
+            <h2 class="mt16">
                 <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
                     <span t-if="doc.state not in ['draft','sent']">Order # </span>
                     <span t-if="doc.state in ['draft','sent']">Quotation # </span>
@@ -149,7 +160,7 @@
                     <span>Pro-Forma Invoice # </span>
                 </t>
                 <span t-field="doc.name"/>
-            </h2> -->
+            </h2>
 
             <div class="row mt32 mb32" id="informations">
                 <div t-if="doc.client_order_ref" class="col-auto col-3 mw-100 mb-2">
@@ -334,7 +345,7 @@
             </p> -->
 
 
-                <div style="position: absolute; top: 800px;page-break-inside: avoid;">
+                <div class="bottom-page" style="position: absolute; top: 1000px;page-break-inside: avoid;">
                     <p style="color: #2b2775; text-align: justify !important;font-size: 15px; ">
                         <b>Note to our clients:</b> Payments can be made in cash, where upon a receipt shall be duly issued, or by bank transfer or any form of 
                             EFT to our account, Account Name: MIDWESTERN GROUP LTD – PRINTING; Account Number: 3100021465; Bank: CENTENARY BANK 
@@ -353,6 +364,27 @@
                     </p>
                 </div>
             </div>
+</template>
+
+<template id="external_layout_footer">
+    <div class="footer">
+        <p style="color: #2b2775; text-align: justify !important;font-size: 15px; ">
+                        <b>Note to our clients:</b> Payments can be made in cash, where upon a receipt shall be duly issued, or by bank transfer or any form of 
+                            EFT to our account, Account Name: MIDWESTERN GROUP LTD – PRINTING; Account Number: 3100021465; Bank: CENTENARY BANK 
+                            MAIN BRANCH (MAPEERA HOUSE). This account is registered to receive EFT payments from Government through the Integrated 
+                            Financial Management System (IFMS). 
+                    </p>
+                    <p style="color: #2b2775;font-family: 'Times New Roman', Times, serif;font-size: 15px;">
+                        <b>
+                            <i>50% Commencement fee.</i>
+                        </b>
+                    </p>
+                    <p style="color: #2b2775;text-align: center;font-family: 'Times New Roman', Times, serif;font-size: 15px;">
+                        <b>
+                            <i>We thank you for your business and assure you of our commitment to provide the best quality services.</i>
+                        </b>
+                    </p>
+    </div>  
 </template>
 
 
