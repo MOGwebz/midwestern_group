@@ -184,16 +184,16 @@
                         <th name="th_description" class="text-left" style="text-align: left !important;border-top:1px solid #ddd;">
                             <span>Description</span>
                         </th>
-                        <th name="th_quantity" class="text-left" style="text-align: left !important;border-top:1px solid #ddd;">
+                        <th name="th_quantity" class="text-left" style="text-align: center !important;border-top:1px solid #ddd;">
                             <span>Quantity</span>
                         </th>
-                        <th name="th_priceunit" class="text-left" style="text-align: left !important;border-top:1px solid #ddd;">
+                        <th name="th_priceunit" class="text-left" style="text-align: center !important;border-top:1px solid #ddd;">
                             <span>Unit Price</span>
                         </th>
                         <th name="th_discount" t-if="display_discount" class="text-right" groups="product.group_discount_per_so_line">
                             <span>Disc.%</span>
                         </th>
-                        <th name="th_taxes" style="text-align: left !important;border-top:1px solid #ddd;">
+                        <th name="th_taxes" style="text-align: center !important;border-top:1px solid #ddd;">
                             <span>Taxes</span>
                         </th>
                         <th name="th_subtotal" style="text-align: right !important;border-top:1px solid #ddd;" class="text-right">
@@ -265,11 +265,13 @@
 
             <div class="clearfix" name="so_total_summary">
                 <div id="total" class="row" name="total">
-                    <div t-attf-class="#{'col-4' if report_type != 'html' else 'col-sm-7 col-md-5'} ml-auto">
-                        <table class="table table-sm">
-                            <tr class="border-black o_subtotal" style="page-break-inside: avoid; width: 50%;float: right;">
-                                <td name="td_amount_untaxed_label"><strong>Subtotal</strong></td>
-                                <td name="td_amount_untaxed" class="text-right">
+                    <div t-attf-class="#{'col-6' if report_type != 'html' else 'col-sm-7 col-md-5'} ml-auto">
+                        <table class="table table-sm" style="page-break-inside: avoid; width: 50%;float: right;">
+                            <tr class="border-black o_subtotal">
+                                <td name="td_amount_untaxed_label">
+                                    <strong>Subtotal</strong>
+                                </td>
+                                <td name="td_amount_untaxed" class="text-right" style="text-align: right !important;border-top:1px solid black;">
                                     <span t-field="doc.amount_untaxed"/>
                                 </td>
                             </tr>
@@ -300,15 +302,17 @@
                                 <td name="td_amount_total_label" style="border-top:1px solid black;">
                                     <strong>Total</strong></td>
                                 <td name="td_amount_total" class="text-right" style="text-align: right !important;border-top:1px solid black;">
-                                    <span t-field="doc.amount_total"/>
+                                    <span t-field="doc.amount_total" class="text-nowrap"/>
                                 </td>
                             </tr>
                         </table>
                     </div>
                 </div>
             </div>
+            <br/>
+            <br/>
 
-            <div t-if="doc.signature" class="mt32 ml64 mr4" name="signature">
+            <!-- <div t-if="doc.signature" class="mt32 ml64 mr4" name="signature">
                 <div class="offset-8">
                     <strong>Signature</strong>
                 </div>
@@ -318,21 +322,19 @@
                 <div class="offset-8 text-center">
                     <p t-field="doc.signed_by"/>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="oe_structure"/>
-
-            <p t-field="doc.note" />
+            <!-- <p t-field="doc.note" />
             <p t-if="doc.payment_term_id.note">
                 <span t-field="doc.payment_term_id.note"/>
             </p>
             <p id="fiscal_position_remark" t-if="doc.fiscal_position_id and doc.fiscal_position_id.sudo().note">
                 <strong>Fiscal Position Remark:</strong>
                 <span t-field="doc.fiscal_position_id.sudo().note"/>
-            </p>
+            </p> -->
 
 
-                <div style="position: absolute; top: 1000px;page-break-inside: avoid;">
+                <div style="position: absolute; top: 800px;page-break-inside: avoid;">
                     <p style="color: #2b2775; text-align: justify !important;font-size: 15px; ">
                         <b>Note to our clients:</b> Payments can be made in cash, where upon a receipt shall be duly issued, or by bank transfer or any form of 
                             EFT to our account, Account Name: MIDWESTERN GROUP LTD – PRINTING; Account Number: 3100021465; Bank: CENTENARY BANK 
@@ -350,8 +352,7 @@
                         </b>
                     </p>
                 </div>
-
-        </div>
+            </div>
 </template>
 
 
