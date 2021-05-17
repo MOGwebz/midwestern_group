@@ -51,16 +51,16 @@
                         <tbody>
                             <tr style="height: 8px"/>
                             <tr style="background: #d5d4e3;">
-                                <td rowspan="2" style="padding-left: 2%;border-right: 1px solid #2b2775;" class="tax_invoice_text">
+                                <!--<td rowspan="2" style="padding-left: 2%;border-right: 1px solid #2b2775;" class="tax_invoice_text">
                                     <h3>
-                                        <!-- <span style="color: #2b2775;" t-if="doc.move_type == 'out_invoice' and doc.state == 'posted'">Tax Invoice</span>
+                                         <span style="color: #2b2775;" t-if="doc.move_type == 'out_invoice' and doc.state == 'posted'">Tax Invoice</span>
                                         <span style="color: #2b2775;" t-if="coc.move_type == 'out_invoice' and doc.state == 'draft'">PRO-FORMA Invoice</span>
                                         <span style="color: #2b2775;" t-if="doc.move_type == 'out_invoice' and doc.state == 'cancel'">Cancelled Invoice</span>
                                         <span style="color: #2b2775;" t-if="doc.move_type == 'out_refund'">Credit Note</span>
                                         <span style="color: #2b2775;" t-if="doc.move_type == 'in_refund'">Vendor Credit Note</span>
-                                        <span style="color: #2b2775;" t-if="doc.move_type == 'in_invoice'">Vendor Bill</span> -->
+                                        <span style="color: #2b2775;" t-if="doc.move_type == 'in_invoice'">Vendor Bill</span> 
                                     </h3>
-                                </td>
+                                </td>-->
                                 <td style="padding: 10px;border-bottom: 1px solid #2b2775;">
                                     <b style="color: #2b2775;">Date:</b>
                                     <span style="color: #2b2775;" class="m-0" t-field="doc.date_order"/>
@@ -154,7 +154,7 @@
             <h2 class="mt16">
                 <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
                     <span t-if="doc.state not in ['draft','sent']">Order # </span>
-                    <span t-if="doc.state in ['draft','sent']">Quotation # </span>
+                    <span t-if="doc.state in ['draft','sent']">Pro Forma Tax Invoice # </span>
                 </t>
                 <t t-if="env.context.get('proforma', False) or is_pro_forma">
                     <span>Pro-Forma Invoice # </span>
@@ -163,26 +163,30 @@
             </h2>
 
             <div class="row mt32 mb32" id="informations">
-                <div t-if="doc.client_order_ref" class="col-auto col-3 mw-100 mb-2">
+                <div t-if="doc.client_order_ref" class="col-auto col-3 mw-100 mb-2" style="display: inline;float:left;margin-right:20px;">
                     <strong>Your Reference:</strong>
                     <p class="m-0" t-field="doc.client_order_ref"/>
                 </div>
-                <div t-if="doc.date_order and doc.state not in ['draft','sent']" class="col-auto col-3 mw-100 mb-2">
-                    <strong>Order Order Date:</strong>
+                <div t-if="doc.date_order and doc.state not in ['draft','sent']" class="col-auto col-3 mw-100 mb-2" style="display: inline;float:left;margin-right:20px;">
+                    <strong>Order Date:</strong>
                     <p class="m-0" t-field="doc.date_order"/>
                 </div>
-                <div t-if="doc.date_order and doc.state in ['draft','sent']" class="col-auto col-3 mw-100 mb-2">
+                <div t-if="doc.date_order and doc.state in ['draft','sent']" class="col-auto col-3 mw-100 mb-2" style="display: inline;float:left;margin-right:20px;">
                     <strong>Quotation Date:</strong>
                     <p class="m-0" t-field="doc.date_order" t-options='{"widget": "date"}'/>
                 </div>
-                <div t-if="doc.validity_date and doc.state in ['draft', 'sent']" class="col-auto col-3 mw-100 mb-2" name="expiration_date">
+                <div t-if="doc.validity_date and doc.state in ['draft', 'sent']" class="col-auto col-3 mw-100 mb-2" name="expiration_date" style="display: inline;float:left;margin-right:20px;">
                     <strong>Expiration:</strong>
                     <p class="m-0" t-field="doc.validity_date"/>
                 </div>
-                <div t-if="doc.user_id.name" class="col-auto col-3 mw-100 mb-2">
+                <div t-if="doc.user_id.name" class="col-auto col-3 mw-100 mb-2" style="display: inline;float:left;margin-right:20px;">
                     <strong>Salesperson:</strong>
                     <p class="m-0" t-field="doc.user_id"/>
                 </div>
+                <!-- <div t-if="doc.user_id.name" class="col-auto col-3 mw-100 mb-2" style="display: inline;float:left;margin-right:20px;">
+                    <strong>Salesperson Phone No:</strong>
+                    <p class="m-0" t-field="doc.phone"/>
+                </div> -->
             </div>
 
             <!-- Is there a discount on at least one line? -->
