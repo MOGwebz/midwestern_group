@@ -183,10 +183,9 @@
                     <strong>Salesperson:</strong>
                     <p class="m-0" t-field="doc.user_id"/>
                 </div>
-                <!-- <div t-if="doc.user_id.name" class="col-auto col-3 mw-100 mb-2" style="display: inline;float:left;margin-right:20px;">
-                    <strong>Salesperson Phone No:</strong>
-                    <p class="m-0" t-field="doc.phone"/>
-                </div> -->
+                <div t-if="doc.user_id.name" class="col-auto col-3 mw-100 mb-2" style="display: inline;float:left;margin-right:20px;">
+                    <strong>Phone No:</strong>
+                </div>
             </div>
 
             <!-- Is there a discount on at least one line? -->
