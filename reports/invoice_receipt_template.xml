@@ -3,7 +3,7 @@
     <template id="sh_rr_invoice_receipt_document" inherit_id="account.report_invoice_document">
         <!-- <t t-call="sh_invoice_receipt_reports.sh_rr_external_layout"> -->
         <xpath expr="//t[@t-call='web.external_layout']" position="replace">
-        </xpath>
+        
             <!-- <t t-set="o" t-value="o.with_context(lang=lang)"/> -->
 
             
@@ -21,7 +21,7 @@
 
                 
 
-            <xpath expr="//div[@class='page']" position="replace">
+            <!-- <xpath expr="//div[@class='page']" position="replace"> -->
 
                 <style> 
                     th {
@@ -382,9 +382,9 @@
                     </div>
                 </div>
 
-            </xpath>
+            <!-- </xpath> -->
 
-        <!-- </xpath> -->
+        </xpath>
     </template>
 
     <template id="sh_rr_invoice_with_payment_receipt_document" inherit_id="midwestern_group.sh_rr_invoice_receipt_document" primary="True">
