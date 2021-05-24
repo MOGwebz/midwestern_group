@@ -2,12 +2,26 @@
 <odoo>
     <template id="sh_rr_invoice_receipt_document" inherit_id="account.report_invoice_document">
         <!-- <t t-call="sh_invoice_receipt_reports.sh_rr_external_layout"> -->
-        <!-- <xpath expr="//t[@t-call='web.external_layout']" position="replace"> -->
-            <t t-set="o" t-value="o.with_context(lang=lang)"/>
+        <xpath expr="//t[@t-call='web.external_layout']" position="replace">
+        </xpath>
+            <!-- <t t-set="o" t-value="o.with_context(lang=lang)"/> -->
 
             
 
             <xpath expr="//t[@t-set='address']" position="replace">
+            </xpath>
+
+                <!-- <div t-attf-class="article o_report_layout_standard o_company_#{o.company_id.id}_layout" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <div class="pt-5">
+                    
+                    <t t-call="web.address_layout"/>
+                </div>
+                <t t-raw="0"/>
+            </div> -->
+
+                
+
+            <xpath expr="//div[@class='page']" position="replace">
 
                 <style> 
                     th {
@@ -31,14 +45,6 @@
                         border-top: 1px solid grey !important;
                     }
                 </style>
-
-                <!-- <div t-attf-class="article o_report_layout_standard o_company_#{o.company_id.id}_layout" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
-                <div class="pt-5">
-                    
-                    <t t-call="web.address_layout"/>
-                </div>
-                <t t-raw="0"/>
-            </div> -->
 
                 <div style="display:block !important;overflow: auto !important;">
                     <div style="display: inline;width: 58%;float: left;">
@@ -136,10 +142,6 @@
                 <br/>
                 <br/>
 
-
-            </xpath>
-
-            <xpath expr="//div[@class='page']" position="replace">
 
                 <div class="page" style="display: block !important;">
                     <style>
