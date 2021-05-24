@@ -362,7 +362,7 @@
                     <br/>
                     <br/>
 
-                    <div style="position: absolute; top: 1000px;page-break-inside: avoid;">
+                    <div style="position: absolute; top: 1000px;page-break-inside: avoid;" t-attf-class="article " t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
                         <p style="color: #2b2775; text-align: justify !important;font-size: 15px; ">
                             <b>Note to our clients:</b> Payments can be made in cash, where upon a receipt shall be duly issued, or by bank transfer or any form of 
                                 EFT to our account, Account Name: MIDWESTERN GROUP LTD – PRINTING; Account Number: 3100021465; Bank: CENTENARY BANK 
@@ -382,8 +382,7 @@
                     </div>
                 </div>
 
-                <div t-attf-class="article " t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
-                </div>
+                
             <!-- </xpath> -->
 
         </xpath>
