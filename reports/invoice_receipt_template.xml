@@ -46,7 +46,7 @@
                     }
                 </style>
 
-                <div style="display:block !important;overflow: auto !important;" t-attf-class="article " t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <div style="display:block !important;overflow: auto !important;">
                     <div style="display: inline;width: 58%;float: left;">
                         <table style="width: 100%;">
                             <thead>
@@ -382,6 +382,8 @@
                     </div>
                 </div>
 
+                <div t-attf-class="article " t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+                </div>
             <!-- </xpath> -->
 
         </xpath>
