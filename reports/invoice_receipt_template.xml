@@ -5,7 +5,17 @@
         <!-- <xpath expr="//t[@t-call='web.external_layout']" position="replace"> -->
             <t t-set="o" t-value="o.with_context(lang=lang)"/>
 
-            <style> 
+            <!-- <div t-attf-class="article o_report_layout_standard o_company_#{o.company_id.id}_layout" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <div class="pt-5">
+                    
+                    <t t-call="web.address_layout"/>
+                </div>
+                <t t-raw="0"/>
+            </div> -->
+
+            <div style="display:block !important;overflow: auto !important;">
+
+                <style> 
                     th {
                         vertical-align : baseline;
                         text-align: center;
@@ -26,17 +36,8 @@
                     .border-top-grey {
                         border-top: 1px solid grey !important;
                     }
-            </style>
+                </style>
 
-            <!-- <div t-attf-class="article o_report_layout_standard o_company_#{o.company_id.id}_layout" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
-                <div class="pt-5">
-                    
-                    <t t-call="web.address_layout"/>
-                </div>
-                <t t-raw="0"/>
-            </div> -->
-
-            <div style="display:block !important;overflow: auto !important;">
                 <div style="display: inline;width: 58%;float: left;">
                     <table style="width: 100%;">
                         <thead>
