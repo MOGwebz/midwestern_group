@@ -8,8 +8,8 @@
 
             
 
-            <xpath expr="//t[@t-set='address']" position="replace">
-            </xpath>
+            <!-- <xpath expr="//t[@t-set='address']" position="replace">
+            </xpath> -->
 
                 <!-- <div t-attf-class="article o_report_layout_standard o_company_#{o.company_id.id}_layout" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
                 <div class="pt-5">
