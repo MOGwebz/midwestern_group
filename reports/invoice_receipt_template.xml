@@ -5,25 +5,6 @@
         <xpath expr="//t[@t-call='web.external_layout']" position="replace">
 
             <t t-call="midwestern_group.sh_rr_external_layout">
-        
-            <!-- <t t-set="o" t-value="o.with_context(lang=lang)"/> -->
-
-            
-
-            <!-- <xpath expr="//t[@t-set='address']" position="replace">
-            </xpath> -->
-
-                <!-- <div t-attf-class="article o_report_layout_standard o_company_#{o.company_id.id}_layout" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
-                <div class="pt-5">
-                    
-                    <t t-call="web.address_layout"/>
-                </div>
-                <t t-raw="0"/>
-            </div> -->
-
-                
-
-            <!-- <xpath expr="//div[@class='page']" position="replace"> -->
 
                 <style> 
                     th {
@@ -385,8 +366,6 @@
                 </div>
 
                 </t>
-                
-            <!-- </xpath> -->
 
         </xpath>
     </template>
