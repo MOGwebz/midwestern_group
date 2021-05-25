@@ -3,6 +3,8 @@
     <template id="sh_rr_invoice_receipt_document" inherit_id="account.report_invoice_document">
         <!-- <t t-call="sh_invoice_receipt_reports.sh_rr_external_layout"> -->
         <xpath expr="//t[@t-call='web.external_layout']" position="replace">
+
+            <t t-call="sh_invoice_receipt_reports.sh_rr_external_layout">
         
             <!-- <t t-set="o" t-value="o.with_context(lang=lang)"/> -->
 
@@ -382,6 +384,7 @@
                     </div>
                 </div>
 
+                </t>
                 
             <!-- </xpath> -->
 

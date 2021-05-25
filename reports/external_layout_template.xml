@@ -30,7 +30,7 @@
         </xpath>
         <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="replace">
             <div t-attf-class="footer o_boxed_footer o_company_#{company.id}_layout">
-                <div class="text-center">
+                <!-- <div class="text-center">
                     <style>
                         p, span, div, li {
                             font-weight: 400;
@@ -48,18 +48,18 @@
                         <br/>
                         <p><strong>We thank you for your business and assure you of our commitment to provide the best quality services.</strong></p>
 
-                    </div>
+                    </div> -->
                     <!-- <ul class="list-inline">
                         <li t-if="company.phone" class="list-inline-item"><span class="o_force_ltr" t-field="company.phone"/></li>
                         <li t-if="company.email" class="list-inline-item"><span t-field="company.email"/></li>
                         <li t-if="company.website" class="list-inline-item"><span t-field="company.website"/></li><br/>
                         <li t-if="company.vat" class="list-inline-item"><t t-esc="company.country_id.vat_label or 'Tax ID'"/>: <span t-field="company.vat"/></li>
                     </ul> -->
-                    <div t-field="company.report_footer"/>
+                    <!-- <div t-field="company.report_footer"/>
                     <div t-if="report_type == 'pdf'">
                         Page: <span class="page"/> / <span class="topage"/>
                     </div>
-                </div>
+                </div> -->
             </div>
         </xpath>
     </template>

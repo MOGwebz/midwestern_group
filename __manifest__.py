@@ -23,8 +23,8 @@
 
     # always loaded
     'data': [
+        "reports/external_layout_template.xml",
         "reports/invoice_report.xml",
-        # "reports/external_layout_template.xml",
         "reports/invoice_receipt_template.xml",
         "reports/quotation_report.xml",
         "reports/quotation_report_template.xml",
