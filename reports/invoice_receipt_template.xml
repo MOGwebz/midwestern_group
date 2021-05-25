@@ -4,7 +4,7 @@
         <!-- <t t-call="sh_invoice_receipt_reports.sh_rr_external_layout"> -->
         <xpath expr="//t[@t-call='web.external_layout']" position="replace">
 
-            <t t-call="sh_invoice_receipt_reports.sh_rr_external_layout">
+            <t t-call="midwestern_group.sh_rr_external_layout">
         
             <!-- <t t-set="o" t-value="o.with_context(lang=lang)"/> -->
 
@@ -48,9 +48,9 @@
                     }
                 </style>
 
-                <div style="display:block !important;overflow: auto !important;">
-                    <div style="display: inline;width: 58%;float: left;">
-                        <table style="width: 100%;">
+                <div style="display:block !important;overflow: hidden !important;">
+                    <div style="display: inline;width: 55%;float: left;">
+                        <table style="">
                             <thead>
                                 <tr>
                                     <td colspan="2" style="padding-left: 2%;padding-top: 3%;background: #2b2775;">
@@ -364,7 +364,7 @@
                     <br/>
                     <br/>
 
-                    <div style="position: absolute; top: 1000px;page-break-inside: avoid;" t-attf-class="article " t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+                    <div style="position: absolute; top: 1000px;page-break-inside: avoid;" t-attf-class="article " >
                         <p style="color: #2b2775; text-align: justify !important;font-size: 15px; ">
                             <b>Note to our clients:</b> Payments can be made in cash, where upon a receipt shall be duly issued, or by bank transfer or any form of 
                                 EFT to our account, Account Name: MIDWESTERN GROUP LTD – PRINTING; Account Number: 3100021465; Bank: CENTENARY BANK 
