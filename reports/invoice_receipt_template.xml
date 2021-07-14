@@ -29,7 +29,7 @@
 
         <div style="display:block !important;overflow: auto !important;">
             <div style="display: inline;width: 58%;float: left;">
-                <table style="width: 100%;">
+                <table style="width: 100%;" cellspacing="0">
                     <thead>
                         <tr>
                             <td colspan="2" style="padding-left: 2%;padding-top: 3%;background: #2b2775;">
@@ -161,7 +161,7 @@
 
             <t t-set="display_discount" t-value="any(l.discount for l in o.invoice_line_ids)"/>
             <br/>
-            <table class="table table-sm o_main_table" name="invoice_line_table" style="width: 100%;">
+            <table class="table table-sm o_main_table" name="invoice_line_table" style="width: 100%;" cellspacing="0">
                 <thead>
 
                     <tr>
