@@ -26,4 +26,16 @@
         <field name="binding_type">report</field>
     </record>
 
+    <!-- Payment Receipt -->
+    <record id="action_sh_rr_payment_receipt_report" model="ir.actions.report">
+        <field name="name">Midwestern Payment Receipt</field>
+        <field name="model">account.payment</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">midwestern_group.sh_rr_payment_receipt</field>
+        <field name="report_file">midwestern_group.sh_rr_payment_receipt</field>
+        <field name="binding_model_id" ref="account.model_account_payment" />
+        <field name="print_report_name">(object.name)</field>
+        <field name="binding_type">report</field>
+    </record>
+
 </odoo>
