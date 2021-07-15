@@ -40,18 +40,18 @@
                         </thead>
                         <tbody>
                             <tr style="height: 8px"/>
-                            <tr style="background: #d5d4e3;">
+                            <tr>
                                 <td rowspan="2" style="padding-left: 2%;border-right: 1px solid #2b2775;" class="tax_invoice_text">
                                     <h3>
-                                       Payment Receipt
+                                       RECEIPT
                                     </h3>
                                 </td>
-                                <td style="padding: 10px;border-bottom: 1px solid #2b2775;">
+                                <td style="padding: 10px;">
                                     <b style="color: #2b2775;">Date:</b>
                                     <span style="color: #2b2775;" class="m-0" t-field="o.date"/>
                                 </td>
                             </tr>
-                            <tr style="background: #d5d4e3;">
+                            <tr>
                                 <td style="padding: 10px;">
                                     <b style="color: #2b2775;">Serial No:</b>
                                     <span style="color: #2b2775;" t-if="o.name != '/'" t-field="o.name"/>
