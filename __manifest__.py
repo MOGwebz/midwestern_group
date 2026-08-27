@@ -1,34 +1,24 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Mid Western Group",
-
-    'summary': """
-        Custom Invoice template for Midwestern Group """,
-
+    'summary': "Custom invoice, quotation and payment receipt templates for Midwestern Group",
     'description': """
-        Custom Invoice template for Midwestern Group.
+        Custom Invoice, Quotation and Payment Receipt templates for Midwestern Group.
     """,
-
     'author': "Jil Insights",
     'website': "http://www.jilinsights.com",
-
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
-
-    # any module necessary for this one to work correctly
-    'depends': ['base', 'account', 'sale'],
-
-    # always loaded
+    'category': 'Accounting',
+    'version': '19.0.1.0.1',
+    'license': 'LGPL-3',
+    'depends': ['base', 'web', 'account', 'sale'],
     'data': [
-        # "reports/external_layout_template.xml",
+        "reports/report_common.xml",
         "reports/invoice_receipt_template.xml",
         "reports/quotation_report.xml",
         "reports/quotation_report_template.xml",
         "reports/payment_receipt_template.xml",
         "reports/invoice_report.xml",
-        #"reports/quotation_order_report_inherit.xml",
-    ]
+    ],
+    'installable': True,
+    'application': False,
 }

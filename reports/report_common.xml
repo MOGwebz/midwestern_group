@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="paperformat_midwestern_a4" model="report.paperformat">
+        <field name="name">Midwestern A4 (single sheet)</field>
+        <field name="default" eval="False"/>
+        <field name="format">A4</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">8</field>
+        <field name="margin_bottom">8</field>
+        <field name="margin_left">8</field>
+        <field name="margin_right">8</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">0</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <template id="mw_client_notes">
+        <div class="mw-client-notes" style="color: #2b2775; page-break-inside: avoid;">
+            <p style="text-align: justify !important; font-size: 13px; margin: 0 0 6px 0;">
+                <b>Note to our clients:</b>
+                Payments can be made in cash, where upon a receipt shall be duly issued, or by bank transfer or any form of
+                EFT to our account, Account Name: MIDWESTERN GROUP LTD - PRINTING; Account Number: 3100021465; Bank: CENTENARY BANK
+                MAIN BRANCH (MAPEERA HOUSE). This account is registered to receive EFT payments from Government through the Integrated
+                Financial Management System (IFMS).
+            </p>
+            <p style="font-family: 'Times New Roman', Times, serif; font-size: 13px; margin: 0 0 6px 0;">
+                <b><i>50% Commencement fee.</i></b>
+            </p>
+            <p style="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 13px; margin: 0;">
+                <b><i>We thank you for your business and assure you of our commitment to provide the best quality services.</i></b>
+            </p>
+        </div>
+    </template>
+</odoo>
