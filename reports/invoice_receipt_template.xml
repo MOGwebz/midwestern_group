@@ -34,13 +34,13 @@
             }
             .mw-header-wrap {
                 width: 100% !important;
-                overflow: hidden !important;
+                overflow: visible !important;
             }
             .mw-brand-right {
                 float: right !important;
                 width: 41% !important;
                 padding: 0 !important;
-                margin: 0 !important;
+                margin: -22px 0 0 0 !important;
             }
             .mw-logo {
                 display: block !important;
@@ -150,6 +150,7 @@
                     </tr>
                 </table>
             </div>
+            <div style="clear: both;"/>
         </div>
 
         <div class="page" style="display: block !important;">

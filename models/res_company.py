@@ -42,11 +42,11 @@ class ResCompany(models.Model):
                 width - 1,
             )
 
-            # Keep a tiny breath of padding so edges are not clipped
+            # Keep a little side/bottom padding; no top padding so the mark sits flush
             pad = max(2, int(min(width, height) * 0.02))
             box = (
                 max(0, left - pad),
-                max(0, top - pad),
+                max(0, top),
                 min(width, right + 1 + pad),
                 min(height, bottom + 1 + pad),
             )
