@@ -8,7 +8,7 @@
     'author': "Jil Insights",
     'website': "http://www.jilinsights.com",
     'category': 'Accounting',
-    'version': '19.0.1.0.1',
+    'version': '19.0.1.0.3',
     'license': 'LGPL-3',
     'depends': ['base', 'web', 'account', 'sale'],
     'data': [
